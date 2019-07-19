@@ -1,0 +1,240 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+
+    <!-- Page Title -->
+    <title> Zeybek Hukuk Bürosu </title>
+
+    <!-- Icon fonts -->
+    <link href="{% static 'mainapp/css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'mainapp/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Plugins for this template -->
+    <link href="{% static 'mainapp/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/jquery.fancybox.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/css/odometer-theme-default.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'mainapp/css/style.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+
+        <!-- start page-loader -->
+        <div class="page-loader">
+            <div class="page-loader-inner">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <!-- end page-loader -->
+
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-2">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-7 col-sm-5">
+                            <div class="contact-info">
+                                <ul>
+                                    <li><i class="ti-mobile"></i> Şehit Musa Sokak 35, 41040 Kocaeli, İzmit Türkiye</li>
+                                    <li><i class="ti-email"></i> info@gmail.com</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-5 col-sm-4">
+                          <div class="social-icons">
+                              <ul>
+                                  <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                  <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="{% static 'mainapp/images/zeybek-logo-renk.png' %}" alt></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li class="menu-item-has-children">
+                                <a href="#">Ana Sayfa</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="about.html">Hakkımızda</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Uzmanlık Alanları</a>
+                                <ul class="sub-menu">
+                                    <li><a href="services.html">Aile Hukuku</a></li>
+                                    <li><a href="services.html">Ceza Hukuku</a></li>
+                                    <li><a href="services.html">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="services.html">İcra-İflas Hukuku</a></li>
+                                    <li><a href="services.html">İş Hukuku</a></li>
+                                    <li><a href="services.html">Miras Hukuku</a></li>
+                                    <li><a href="services.html">Tazminat Hukuku</a></li>
+                                    <li><a href="services.html">Ticaret Hukuku</a></li>
+                                    <li><a href="services.html">Tıp Hukuku</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Yayınlar</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">İletişim</a>
+
+                            </li>
+
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->
+
+        {% block body %}
+
+
+        {% endblock %}
+
+                <!-- start site-footer -->
+                <footer class="site-footer">
+                    <div class="upper-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-lg-3 col-md-3 col-sm-6">
+                                    <div class="widget about-widget">
+                                        <div class="logo widget-title">
+                                            <img src="{% static 'mainapp/images/zeybek-hukuk-logo-beyaz.png' %}" alt>
+                                        </div>
+                                        <p>Zeybek Hukuk | Danışmanlık Bürosu yıllara sari hukuki deneyimi ile müvekkillerine hukuki hizmet için İzmit'te hazır.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col col-lg-3 col-md-3 col-sm-6">
+                                    <div>
+                                        <div class="widget-title">
+                                            <h3>Son Hukuki Yayınlar</h3>
+                                        </div>
+                                        <ul>
+                                          {% for makale in ucmakale %}
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">{{ makale.makale_baslik }}</a></li>
+                                          {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col col-lg-3 col-md-3 col-sm-6">
+                                    <div>
+                                        <div class="widget-title">
+                                            <h3>Hukuki Uzmanlıklar</h3>
+                                        </div>
+                                        <ul>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Ceza Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Aile Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Gayrimenkul Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">İcra-İflas Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">İş Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Miras Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Tazminat Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Ticaret Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Tıp Hukuku</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col col-lg-3 col-md-3 col-sm-6">
+                                    <div class="widget contact-widget">
+                                        <div class="widget-title">
+                                            <h3>Bize Ulaşın</h3>
+                                        </div>
+                                        <ul>
+                                            <li><span>Adres : </span> Şehit Musa Sokak 35, 41040 Kocaeli, İzmit Türkiye</li>
+                                            <li><span>Telefon : </span> (123) 456-78-95 OR  (123) 789456</li>
+                                            <li><span>Email : </span> info@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <div class="lower-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="separator"></div>
+                                <div class="col col-xs-12">
+                                    <p class="copyright-one">© 2019. Zeybek Hukuk Bürosu </p>
+
+                                        <div class="social-icons">
+                                            <ul>
+                                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end site-footer -->
+
+            </div>
+            <!-- end of page-wrapper -->
+
+
+            <!-- All JavaScript files
+            ================================================== -->
+            <script src="{% static 'mainapp/js/jquery.min.js' %}"></script>
+            <script src="{% static 'mainapp/js/bootstrap.min.js' %}"></script>
+
+            <!-- Plugins for this template -->
+            <script src="{% static 'mainapp/js/jquery-plugin-collection.js' %}"></script>
+
+            <!-- Custom script for this template -->
+            <script src="{% static 'mainapp/js/script.js' %}"></script>
+        </body>
+
+        </html>
