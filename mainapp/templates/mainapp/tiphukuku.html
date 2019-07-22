@@ -1,0 +1,69 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | Tıp Hukuku </title>
+<meta name="description" content="Avukat Kerem Zeybek ve Zeybek Hukuk Bürosunun Sağlık Hukuku Alanındaki Paylaşımlarını yaptığı bilgilendirici hukuki sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>Tıp Hukuku</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>Tıp Hukuku</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section choose-mt-2">
+    <div class="container">
+        <div class="row choose-mb">
+
+          <div class="col col-lg-8 col-lg-offset-1 col-sm-12>
+              <div class="service-single-content">
+                  <div class="service-pic">
+                      <img src="{% static 'mainapp/images/zeybek-hukuk-tip-hukuku.png' %}" alt="Zeybek Hukuk Tıp-Sağlık Hukuku"></img>
+                  </div>
+                  <h2>Tıp Hukuku</h2>
+                    <p>Ülkemizde sağlık alanında yetersizliğin giderilmesi ve özel sektörün giderek yaygınlaşmasıyla birlikte birçok özel hastane kurulmuştur. Tıp alanında teknolojinin hızla gelişimi ve özelleşmenin artmasıyla birlikte hukuki sorun ve anlaşmazlıklar giderek artmaya başlamış, ilgili süreçler giderek karmaşıklaşarak içinden çıkılamaz bir hal almaya başlamıştır. Sağlık alanında gerek hizmet verenler gerekse de hizmet alan bireylerin haklarının savunulabilmesi adına Sağlık & Tıp Hukuku hayatımıza girmiştir. Zeybek Hukuk Bürosu olarak ilgili hukuk dalı kapsamında yaşamış olduğunuz anlaşmazlıkların çözümü için adli süreci başlatarak takibini sağlıyoruz.</p>
+                  <h3 class="color-b">Sağlık & Tıp Hukuku Nedir?</h3>
+                    <p>Sağlık Hukuku, sağlık sektöründe hizmet sağlayan kurumlar ile sağlık hizmeti alan şahısları kapsayan önemli bir hukuk dalıdır. İlgili konuların idare ve ceza hukuku ile birlikte incelenmesi gerekmektedir. Hekimlerin yanı sıra hastaların da sahip oldukları birçok hakkı bilmeleri gerektiği ve sahip oldukları haklar çerçevesinde bilinçli bir şekilde hareket etmelerini sağlamak amacıyla hayatımıza giren Tıp Hukuku, hekimlerin kendi alanlarında uzmanlaşarak kendilerini geliştirmelerinde de oldukça önemli bir role sahiptir.</p>
+                    <p>Her alanda olduğu gibi taraflar sahip oldukları hakları öğrenerek bu haklar çerçevesinde bilinçli bir şekilde hareket & eylem sergilemeleri açısından önemlidir. Yalnızca hizmet alan kişiler değil aynı zamanda hastane ve sağlık kuruluşlarının da hukuki açıdan devamlı olarak uzman desteği alarak ileride yaşanması muhtemel anlaşmazlıkları belirleyerek önlem alması oldukça önemlidir.</p>
+                  <h3>Zeybek Hukuk Bürosu Tarafından Tıp Hukuku Alanında Sağlanan Bazı Hizmetler</h3>
+                    <p>Avukat Kerem Zeybek başta olmak üzere Zeybek Hukuk Bürosu bünyesinde sizlere profesyonel olarak hizmet sağlayan avukat kadromuzla birlikte yaşamış olduğunuz istenmeyen durumlar ve anlaşmazlıklar sonucunda yanınızda olarak hukuki destek sağlıyoruz. Büromuz avukatlarına Tıp Hukuku kapsamında en sık gelen dava başlıkları ise şunlardır;</p>
+                    <ul>
+                      <li class="uzmanlik-list">Tıbbi müdahalelerden kaynaklı olarak sağlık mesleği mensuplarının idari ve cezai sorumluluğu</li>
+                      <li class="uzmanlik-list">Hasta – hekim tedavi sözleşmeleri ve bundan kaynaklanan hukuki ve cezai uyuşmazlıklar</li>
+                      <li class="uzmanlik-list">Özel sağlık kuruluşlarına yönelik idari denetimden kaynaklanan idari uyuşmazlıklar</li>
+                      <li class="uzmanlik-list">Sağlık mesleği mensuplarınca işlenebilecek suçlar</li>
+                      <li class="uzmanlik-list">Malpraktis’ten kaynaklanan tazminat ve ceza davaları</li>
+                    </ul>
+                    <p>İlgili başlıklar yalnızca örnek vermek amacıyla olup, Zeybek Hukuk Bürosu olarak Tıp Hukuku kapsamında ele alınan tüm davalarda danışmanlık ve avukatlık hizmeti sağlamaktayız.</p>
+              </div>
+
+            {% include 'mainapp/components/practices.html' %}
+
+
+            </div>
+        </div>
+        <hr class="divider_40">
+
+</section>
+<!-- end service-single-section -->
+
+
+
+
+{% endblock %}

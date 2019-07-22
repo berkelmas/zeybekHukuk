@@ -1,6 +1,13 @@
 {% extends 'mainapp/components/layout.html' %}
 {% load static %}
 
+{% block metaTitle %}
+
+<title> Zeybek Hukuk Bürosu </title>
+<meta name="description" content="Zeybek Hukuk ve Danışmanlık Bürosunun Hukuki Paylaşımlar Yaptığı ve Hukuki iletişim Bilgilerini Paylaştığı Web Sayfasıdır.">
+
+{% endblock %}
+
 {% block body %}
 
 
@@ -8,7 +15,7 @@
 <section class="hero hero-slider-wrapper hero-style-1">
     <div class="hero-slider">
         <div class="slide">
-            <img src="{% static 'mainapp/images/zeybek-hukuk-slider-2.png' %}" alt class="slider-bg">
+            <img src="{% static 'mainapp/images/zeybek-hukuk-slider-2.png' %}" alt="Zeybek Hukuk Bürosu Kimdir?" class="slider-bg">
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-8 slide-caption">
@@ -19,7 +26,7 @@
                             <h2>Müvekkillerimiz İçin<span> En İyisi</span></h2>
                         </div>
                         <div class="btns">
-                            <a href="#" class="theme-btn-s2">Daha Fazlası</a>
+                            <a href="{% url 'about' %}" class="theme-btn-s2">Daha Fazlası</a>
                         </div>
 
                     </div>
@@ -28,7 +35,7 @@
         </div>
 
         <div class="slide">
-          <img src="{% static 'mainapp/images/zeybek-slider-1.png' %}" alt class="slider-bg">
+          <img src="{% static 'mainapp/images/zeybek-slider-1.png' %}" alt="Zeybek Hukuk Ne Yapar?" class="slider-bg">
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-8  slide-caption">
@@ -39,7 +46,7 @@
                             <h2>Hukuki Uyuşmazlıklarda<span> Uzman Çözümler</span></h2>
                         </div>
                         <div class="btns">
-                            <a href="#" class="theme-btn-s2">Uzmanlıklarımız</a>
+                            <a href="{% url 'about' %}" class="theme-btn-s2">Hakkımızda</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +86,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
             <div class="col col-md-5">
                 <div class="about-title">
                     <div class="img-holder">
-                        <img src="{% static 'mainapp/images/zeybek-hukuk-hakkimizda-ana.png' %}" alt="">
+                        <img src="{% static 'mainapp/images/zeybek-hukuk-hakkimizda-ana.png' %}" alt="Zeybek Hukuk Hakkında">
                     </div>
                 </div>
             </div>
@@ -88,7 +95,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
                     <h1>Kaliteli, DÜrüst Hukuki Hizmet</h1>
                     <h2>Zeybek Hukuk Bürosu olarak doğru hukuki çözüm anlayışı ile hukuki sorunları çözüme kavuşturuyoruz.</h2>
                     <p>Zeybek Hukuk | Danışmanlık Bürosu olarak, müvekkillerimizin taleplerini hukuki çerçevede en uygun ve en kaliteli hizmet anlayışımız ile karşılamaya çalışıyor ve büyük bir titizlikle tüm hukuki süreci takip ediyor; sonuçlandırıyoruz. </p>
-                    <a href="#" class="theme-btn-s2">Hakkımızda Daha Fazlası</a>
+                    <a href="{% url 'about' %}" class="theme-btn-s2">Hakkımızda Daha Fazlası</a>
                 </div>
             </div>
         </div> <!-- end row -->
@@ -149,7 +156,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
                 <div class="team-grids" style="display: flex; justify-content: center;">
                     <div class="grid">
                         <div class="img-holder">
-                            <img src="{% static 'mainapp/images/zeybek-hukuk-avukat-resim.png' %}" alt>
+                            <img src="{% static 'mainapp/images/zeybek-hukuk-avukat-resim.png' %}" alt="Zeybek Hukuk Poster">
                         </div>
                         <div class="details">
                             <h3>Av. Kerem Zeybek</h3>
@@ -158,7 +165,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
 
                     <div class="grid">
                         <div class="img-holder">
-                            <img src="{% static 'mainapp/images/zeybek-hukuk-avukat-resim.png' %}" alt>
+                            <img src="{% static 'mainapp/images/zeybek-hukuk-avukat-resim.png' %}" alt="Zeybek Hukuk Poster">
                         </div>
                         <div class="details">
                             <h3>Av. Libaden Çeğen</h3>
@@ -193,7 +200,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
 
                   <div class="grid">
                       <div class="img-holder">
-                          <img src="{% static 'mainapp/images/zeybek-hukuk-makale-resmi.png' %}" alt="">
+                          <img src="{% static 'mainapp/images/zeybek-hukuk-makale-resmi.png' %}" alt="Zeybek Hukuktan Hukuki Yayınlar">
                       </div>
                       <div class="details">
                           <div class="meta">
@@ -201,7 +208,7 @@ Zeybek Hukuk Bürosu, 1979 yılında merhum Av. Ali Zeybek’in kuruculuğunda A
                                   <li>{{ makale.get_makale_kategori_display }}</li>
                               </ul>
                           </div>
-                          <h3><a href="#">{{ makale.makale_baslik }}</a></h3>
+                          <h3><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h3>
                       </div>
                   </div>
 

@@ -112,7 +112,7 @@
     //Setting hero slider
     function heroSlider() {
         if ($(".hero-slider").length) {
-            $(".hero-slider").slick({
+            $(".hero-slider").not('.slick-initialized').slick({
                 autoplay: true,
                 autoplaySpeed: 6000,
                 pauseOnHover: true,
@@ -612,14 +612,14 @@
         = SHOP DETAILS PAGE PRODUCT SLIDER
     -------------------------------------------*/
     if ($(".shop-single-slider").length) {
-        $('.slider-for').slick({
+        $('.slider-for').not('.slick-initialized').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             fade: true,
             asNavFor: '.slider-nav'
         });
-        $('.slider-nav').slick({
+        $('.slider-nav').not('.slick-initialized').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
@@ -662,30 +662,6 @@
             items: 1
         });
     }
-
-
-    /*------------------------------------------
-        = BACK TO TOP BTN SETTING
-    -------------------------------------------*/
-    $("body").append("<a href='#' class='back-to-top'><i class='ti-arrow-up'></i></a>");
-
-    function toggleBackToTopBtn() {
-        var amountScrolled = 1000;
-        if ($(window).scrollTop() > amountScrolled) {
-            $("a.back-to-top").fadeIn("slow");
-        } else {
-            $("a.back-to-top").fadeOut("slow");
-        }
-    }
-
-    $(".back-to-top").on("click", function() {
-        $("html,body").animate({
-            scrollTop: 0
-        }, 700);
-        return false;
-    })
-
-
 
     /*------------------------------------------
         = CONTACT FORM SUBMISSION
@@ -816,8 +792,6 @@
 		if ($(".site-header").length) {
             stickyMenu( $('.site-header .navigation'), "sticky-on" );
         }
-
-        toggleBackToTopBtn();
 
     });
 

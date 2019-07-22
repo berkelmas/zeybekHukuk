@@ -11,7 +11,6 @@ from unidecode import unidecode
 class Contact(models.Model):
     iletisim_adsoyad = models.CharField(('Gönderenin Ad-Soyadı'), max_length=100)
     iletisim_telefon = models.CharField(('Ulaşım Bilgileri'), max_length= 100)
-    iletisim_mail = models.CharField(('Mail Adresi'), max_length=100)
     iletisim_mesaj = models.TextField(('Mesaj'))
     iletisim_tarihi = models.DateTimeField(('İletişim Formu Gönderilme Tarihi'), auto_now_add=True)
 
@@ -48,10 +47,10 @@ class Makaleler(models.Model):
         ('icrahukuku', 'İcra Hukuku'),
         ('ailehukuku', 'Aile Hukuku'),
         ('ticarethukuku', 'Ticaret Hukuku'),
-        ('sigortahukuku', 'Sigorta Hukuku'),
-        ('saglikhukuku', 'Sağlık Hukuku'),
+        ('tazminathukuku', 'Tazminat Hukuku'),
+        ('tiphukuku', 'Tıp Hukuku'),
         ('gayrimenkulhukuku', 'Gayrimenkul Hukuku'),
-        ('sozlesmelerhukuku', 'Sözleşmeler Hukuku'),
+        ('mirashukuku', 'Miras Hukuku'),
         ('cezahukuku', 'Ceza Hukuku')
     )
 

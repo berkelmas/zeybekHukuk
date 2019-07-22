@@ -1,0 +1,111 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | İletişim </title>
+<meta name="description" content="Kocaeli Avukatı olan Zeybek Hukuk Bürosu ve Avukat Kerem Zeybek'e ulaşım sayfasıdır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>İletişim</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>İletişim</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+
+<!-- start contact-pg-section -->
+<section class="contact-pg-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-6">
+                <div class="section-title-s2">
+                    <span>İletişim</span>
+                    <h2>BİZE ULAŞIN</h2>
+                </div>
+            </div>
+            <div class="col col-md-6">
+                <div class="contact-info-area">
+                    <div class="title">
+                        <h3>İletişim Bilgilerimiz</h3>
+                        <p>Zeybek Hukuk Bürosuna aşağıdaki telefon numarası veya mail adresinden ulaşabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-6">
+                <div class="contact-form">
+                    <form method="post" class="contact-validation-active">
+                        {% csrf_token %}
+                        <div>
+                            <input type="text" name="isim" class="form-control" placeholder="Ad-Soyad">
+                        </div>
+                        <div>
+                            <input type="text" name="telefon" class="form-control" placeholder="Telefon Numarası">
+                        </div>
+                        <div>
+                            <textarea class="form-control" name="mesaj"  id="note" placeholder="Mesajınız"></textarea>
+                        </div>
+                        <div class="submit-btn-wrapper">
+                            <button type="submit" class="theme-btn-s3">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col col-lg-6">
+                <div class="info-box-outer">
+                    <div class="info-box">
+                        <div class="grid">
+                            <div class="icon">
+                                <i class="ti-location-pin"></i>
+                            </div>
+                            <h3>Adres</h3>
+                            <p>Karabaş, Şht. Musa Sk. No:35 İzmit/Kocaeli</p>
+                        </div>
+                        <div class="grid">
+                            <div class="icon">
+                                <i class="ti-mobile"></i>
+                            </div>
+                            <h3>Telefon</h3>
+                            <p>0262 322 21 66</p>
+                        </div>
+                        <div class="grid">
+                            <div class="icon">
+                                <i class="ti-email"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>info@keremzeybek.com</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d755.4871841781998!2d29.938195875474506!3d40.763152220519025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4f87f5f46cd1%3A0x5eb332ffb84c137!2zS2FyYWJhxZ8sIMWeaHQuIE11c2EgU2suIE5vOjM1LCA0MTA0MCDEsHptaXQvS29jYWVsaQ!5e0!3m2!1sen!2str!4v1563813580373!5m2!1sen!2str" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end contact-pg-section -->
+
+{% endblock %}

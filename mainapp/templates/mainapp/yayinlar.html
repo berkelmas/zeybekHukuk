@@ -1,0 +1,145 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | Yayınlar </title>
+<meta name="description" content="Avukat Kerem Zeybek başta olmak üzere Zeybek Hukuk Bürosunun Hukuki Yayınlarını Paylaştığı Sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>Yayınlar</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>Yayınlar</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+
+<!-- start blog-pg-section -->
+<section class="blog-pg-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8">
+                <div class="blog-content">
+
+                  {% for makale in articles %}
+                    <div class="post">
+                        <div class="entry-media">
+                            <img src="{% static 'mainapp/images/zeybek-hukuk-makaleler.png' %}" alt="Zeybek Hukuktan Hukuki Makaleler">
+                        </div>
+                        <h3><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }} </a></h3>
+                        <ul class="meta">
+                            <li><a href="{% url 'about' %}">Av. Kerem Zeybek</a></li>
+                            <li><a>{{ makale.makale_yayintarihi }}</a></li>
+                        </ul>
+                        <div class="entry-details">
+                            <p>{{ makale.makale_mesaj|safe|truncatechars_html:400|linebreaks }}</p>
+                            <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="read-more">Daha Fazla Oku -</a>
+                        </div>
+                    </div>
+                  {% endfor %}
+
+                    <div class="pagination-wrapper pagination-wrapper-left">
+                        <ul class="pg-pagination">
+
+                          {% if articles.previous_page_number != 0 %}
+                            {% if alan %}
+                            <li>
+                                <a href="?page={{ articles.previous_page_number }}&hukuki-alan={{ alan }}" aria-label="Previous">
+                                    <i class="ti-arrow-left"></i>
+                                </a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
+                                    <i class="ti-arrow-left"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+                          {% endif %}
+
+                            {% for i in articles.paginator.page_range %}
+                              {% if alan %}
+                              <li {% if articles.number == i %} class="active" {% endif %}><a href="?page={{ i }}&hukuki-alan={{ alan }}">{{ i }}</a></li>
+                              {% else %}
+                              <li {% if articles.number == i %} class="active" {% endif %}><a href="?page={{ i }}">{{ i }}</a></li>
+                              {% endif %}
+                            {% endfor %}
+
+                          {% if articles.next_page_number != articles.paginator.page_range %}
+                            {% if alan %}
+                            <li>
+                                <a href="?page={{ articles.next_page_number }}&hukuki-alan={{ alan }}" aria-label="Next">
+                                    <i class="ti-arrow-right"></i>
+                                </a>
+                            </li>
+
+                            {% else %}
+                              <li>
+                                  <a href="?page={{ articles.next_page_number }}" aria-label="Next">
+                                      <i class="ti-arrow-right"></i>
+                                  </a>
+                              </li>
+                            {% endif %}
+
+                          {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="blog-sidebar">
+                    <div class="widget search-widget">
+
+                    </div>
+                    <div class="widget categories-widget">
+                        <h3>Kategoriler</h3>
+                          <ul>
+                            <li><a href="?hukuki-alan=ailehukuku">Aile Hukuku</a></li>
+                            <li><a href="?hukuki-alan=cezahukuku">Ceza Hukuku</a></li>
+                            <li><a href="?hukuki-alan=gayrimenkulhukuku">Gayrimenkul Hukuku</a></li>
+                            <li><a href="?hukuki-alan=icrahukuku">İcra-İflas Hukuku</a></li>
+                            <li><a href="?hukuki-alan=ishukuku">İş Hukuku</a></li>
+                            <li><a href="?hukuki-alan=mirashukuku">Miras Hukuku</a></li>
+                            <li><a href="?hukuki-alan=tazminathukuku">Tazminat Hukuku</a></li>
+                            <li><a href="?hukuki-alan=ticarethukuku">Ticaret Hukuku</a></li>
+                            <li><a href="?hukuki-alan=tiphukuku">Tıp Hukuku</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget popular-post-widget">
+                        <h3>Son Yayınlar</h3>
+                        <ul>
+                          {% for makale in ucmakale %}
+                            <li>
+                                <div class="post-image">
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><img src="{% static 'mainapp/images/zeybek-hukuk-kucuk-makale.png' %}" alt="Zeybek Hukuk Amblem"></a>
+                                </div>
+                                <div class="post-info">
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><span class="post-title">{{ makale.makale_baslik }}</span></a>
+                                    <span class="color-g">{{ makale.makale_yayintarihi }}</span>
+                                </div>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end blog-pg-section -->
+
+{% endblock %}

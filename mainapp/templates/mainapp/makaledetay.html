@@ -1,0 +1,117 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | {{makale.makale_baslik}} </title>
+<meta name="description" content="{{makale.makale_meta_description}}">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h1 style="font-size: 55px;">{{ makale.makale_baslik }}</h1>
+                <ol class="breadcrumb">
+                    <li><a style="color: white;" href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>{{ makale.makale_baslik }}</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+
+<!-- start blog-single-section -->
+<section class="blog-single-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8">
+                <div class="blog-content">
+                    <div class="post">
+
+                        <h2 class="color-b">{{ makale.makale_baslik }}</h2>
+                        <ul class="meta">
+                            <li><a href="{% url 'about' %}">Av. Kerem Zeybek</a></li>
+                            <li><a>{{ makale.makale_yayintarihi }}</a></li>
+                        </ul>
+                        <div class="entry-details">
+                          {{ makale.makale_mesaj | safe }}
+                        </div>
+                    </div>
+
+                    <div class="tag-share">
+                        <div class="tag">
+                            <i class="ti-folder"></i>
+                            <ul>
+                              {% for tag in makale.tag.all %}
+                                <li><a>{{ tag }}</a></li>
+                              {% endfor %}
+                            </ul>
+                        </div>
+
+                    </div> <!-- end tag-share -->
+
+                    <div class="author-box">
+
+                        <div class="author-content">
+                            <a href="{% url 'about' %}" class="author-name">Avukat Kerem Zeybek</a>
+                            <p>Avukat Kerem Zeybek, Yeditepe Üniversitesi’nde %100 YÖK Bursu ile eğitimini tamamlamıştır. Hukuk eğitim öğreniminin bir dönemini Salzburg Üniversitesi’nde gerçekleştirmiş ve Yeditepe Üniversitesi’nden mezun olmuştur. İngilizce dil bilgisi çok iyi düzeydedir.</p>
+                            <div class="socials">
+
+                            </div>
+                        </div>
+                    </div> <!-- end author-box -->
+
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="blog-sidebar">
+                    <div class="widget search-widget">
+
+                    </div>
+                    <div class="widget categories-widget">
+                        <h3>Uzmanlık Alanları</h3>
+                          <ul>
+                            <li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                            <li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                            <li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                            <li><a href="{% url 'icrahukuku' %}">İcra-İflas Hukuku</a></li>
+                            <li><a href="{% url 'ishukuku' %}">İş Hukuku</a></li>
+                            <li><a href="{% url 'mirashukuku' %}">Miras Hukuku</a></li>
+                            <li><a href="{% url 'tazminathukuku' %}">Tazminat Hukuku</a></li>
+                            <li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                            <li><a href="{% url 'tiphukuku' %}">Tıp Hukuku</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget popular-post-widget">
+                        <h3>Son Yayınlar</h3>
+                        <ul>
+                          {% for makale in ucmakale %}
+                            <li>
+                                <div class="post-image">
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><img src="{% static 'mainapp/images/zeybek-hukuk-kucuk-makale.png' %}" alt="Zeybek Hukuk Sembol"></a>
+                                </div>
+                                <div class="post-info">
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><span class="post-title">{{ makale.makale_baslik }}</span></a>
+                                    <span class="color-g">{{ makale.makale_yayintarihi }}</span>
+                                </div>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end blogblog-single-section-section -->
+
+
+{% endblock %}

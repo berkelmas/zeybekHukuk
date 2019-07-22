@@ -1,0 +1,71 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | Aile Hukuku </title>
+<meta name="description" content="Avukat Kerem Zeybek'in Aile Hukuku ile ilgili hukuki görüşlerini ve Zeybek Hukuk Bürosunun boşanma hukuku alanındaki tecrübelerini anlattığı sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>Aile Hukuku</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>Aile Hukuku</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section choose-mt-2">
+    <div class="container">
+        <div class="row choose-mb">
+
+          <div class="col col-lg-8 col-lg-offset-1 col-sm-12>
+              <div class="service-single-content">
+                  <div class="service-pic">
+                      <img src="{% static 'mainapp/images/zeybek-hukuk-aile-hukuku.png' %}" alt="Zeybek Hukuk Aile Hukuku"></img>
+                  </div>
+                  <h2>Aile Hukuku</h2>
+                  <p>Toplumun temel yapıtaşı olan Aile, anne, baba ve çocukların bir araya gelmesi sonucunda oluşan toplumun en küçük birimidir. Toplumların oluşmasını sağlayan Aile kavramı içinde bulunduğu toplumun inan, gelenek ve göreneklerinin ilerleyen nesillere aktarılmasını sağlayan ve bunları muhafaza eden en önemli birimdir. Bu nedenle başta ülkemiz olmak üzere dünya üzerinde yer alan her toplum ve ülkede Aile kavramına oldukça fazla önem gösterilmiş ve hukuki olarak birçok açıdan ailelerin korunmasına yönelik yasalar düzenlenmiştir. Yapılan bu yasal düzenlemeler neticesinde Aile Hukuku adı altında bir hukuk dalı oluşturulmuştur. Zeybek Hukuk Bürosu, aileleri ilgilendirin tüm anlaşmazlık ve problemler için hukuki anlamda profesyonel bir danışmanlık ve avukatlık hizmeti sağlamaktadır</p>
+                  <h3 class="color-b">Aile Hukuku Nedir, Neleri Kapsar? </h3>
+                  <p>Aile Hukuku, toplumun temellerinin oluşturulmasını sağlayan aile kavramının birçok açıdan tüm detaylarıyla ele alınması, kişilerin hak ve özgürlüklerinin korunabilmesi için oluşturulan hukuk dallarından birisidir. Toplum içerisinde yaşamını sürdüren her bireyin gerçekten özgür olduğunu hissedebilmesi ve mutlu bir yaşantı sürdürebilmesi adına medeni hukuk kapsamında oluşturulmuş bir hukuk dalıdır</p>
+
+                  <h3 class="color-b">Zeybek Hukuk Bürosu Tarafından Aile Hukuku Alanında Sağlanan Bazı Hizmetler</h3>
+                  <p>Başta Avukat Kerem Zeybek olmak üzere büro arkadaşlarımızla birlikte sizlere hukukun birçok alanında profesyonel danışmanlık ve avukatlık hizmetleri sağlayarak, yaşamış olduğunuz anlaşmazlıkların çözüme kavuşturulmasına yardımcı oluyoruz.</p>
+                  <ul>
+                    <li class="uzmanlik-list">Boşanma davaları,</li>
+                    <li class="uzmanlik-list">Nişanın bozulması ardından açılabilecek her türlü dava,</li>
+                    <li class="uzmanlik-list">Mal paylaşım davası, katılma ve katkı alacağıyla ilgili tüm davalar,</li>
+                    <li class="uzmanlik-list">Nafaka ile ilgili davalar,</li>
+                    <li class="uzmanlik-list">Velayet ile ilgili davalar,</li>
+                    <li class="uzmanlik-list">Soy bağının kurulmasıyla ilgili davalar,</li>
+                    <li class="uzmanlik-list">Aile Hukuku kapsamında ele alınan diğer davalar.</li>
+                    <p>Zeybek Hukuk Bürosu olarak yalnızca örnek olması amacıyla ilgili davalar belirtilmiş olup Aile Hukuku kapsamında ele alınan tüm davalarda sizlere yardımcı oluyoruz.</p>
+                  </ul>
+              </div>
+
+            {% include 'mainapp/components/practices.html' %}
+
+
+            </div>
+        </div>
+        <hr class="divider_40">
+
+</section>
+<!-- end service-single-section -->
+
+
+
+
+{% endblock %}

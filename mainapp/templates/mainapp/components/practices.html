@@ -1,0 +1,30 @@
+<div class="col col-lg-3 col-sm-12">
+    <div class="service-sidebar">
+        <div class="experience-text">
+            <h2><span>40</span> Yıllık Tecrübe</h2>
+        </div>
+        <div class="widget service-list-widget">
+        <h3>Uzmanlık Alanları</h3>
+            <ul>
+                <li {% if nbar == 'ailehukuku' %} class="current" {% endif %}><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                <li {% if nbar == 'cezahukuku' %} class="current" {% endif %}><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                <li {% if nbar == 'gayrimenkulhukuku' %} class="current" {% endif %}><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                <li {% if nbar == 'icrahukuku' %} class="current" {% endif %}><a href="{% url 'icrahukuku' %}">İcra Hukuku</a></li>
+                <li {% if nbar == 'ishukuku' %} class="current" {% endif %}><a href="{% url 'ishukuku' %}">İş Hukuku</a></li>
+                <li {% if nbar == 'mirashukuku' %} class="current" {% endif %}><a href="{% url 'mirashukuku' %}">Miras Hukuku</a></li>
+                <li {% if nbar == 'tazminathukuku' %} class="current" {% endif %}><a href="{% url 'tazminathukuku' %}">Tazminat Hukuku</a></li>
+                <li {% if nbar == 'ticarethukuku' %} class="current" {% endif %}><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                <li {% if nbar == 'tiphukuku' %} class="current" {% endif %}><a href="{% url 'tiphukuku' %}">Tıp Hukuku</a></li>
+            </ul>
+        </div>
+        <div class="widget contact-widget">
+            <div>
+                <h4>Bizimle İletişime Geçin</h4>
+                <p>Hukuki Sorunlarınız İçin Bizimle İletişime Geçebilirsiniz. </p>
+                <a href="tel:+902623222166">Hemen Ara <i class="ti-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>

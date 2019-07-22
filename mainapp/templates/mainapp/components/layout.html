@@ -8,11 +8,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="irstheme">
 
-    <!-- Page Title -->
-    <title> Zeybek Hukuk Bürosu </title>
+    {% block metaTitle %}
 
+
+    {% endblock %}
     <!-- Icon fonts -->
     <link href="{% static 'mainapp/css/themify-icons.css' %}" rel="stylesheet">
     <link href="{% static 'mainapp/font/flaticon.css' %}" rel="stylesheet">
@@ -64,19 +64,13 @@
                             <div class="contact-info">
                                 <ul>
                                     <li><i class="ti-mobile"></i> Şehit Musa Sokak 35, 41040 Kocaeli, İzmit Türkiye</li>
-                                    <li><i class="ti-email"></i> info@gmail.com</li>
+                                    <li><i class="ti-email"></i>info@zeybekhukuk.com</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="col col-md-5 col-sm-4">
-                          <div class="social-icons">
-                              <ul>
-                                  <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                  <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                              </ul>
-                          </div>
+
                         </div>
                     </div>
                 </div>
@@ -90,36 +84,36 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="{% static 'mainapp/images/zeybek-logo-renk.png' %}" alt></a>
+                        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'mainapp/images/zeybek-logo-renk.png' %}" alt="Zeybek Hukuk Logo"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
                         <ul class="nav navbar-nav">
-                            <li class="menu-item-has-children">
-                                <a href="#">Ana Sayfa</a>
+                            <li>
+                                <a href="{% url 'index' %}">Ana Sayfa</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}">Hakkımızda</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="about.html">Hakkımızda</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Uzmanlık Alanları</a>
+                                <a style="cursor: pointer;">Uzmanlık Alanları</a>
                                 <ul class="sub-menu">
-                                    <li><a href="services.html">Aile Hukuku</a></li>
-                                    <li><a href="services.html">Ceza Hukuku</a></li>
-                                    <li><a href="services.html">Gayrimenkul Hukuku</a></li>
-                                    <li><a href="services.html">İcra-İflas Hukuku</a></li>
-                                    <li><a href="services.html">İş Hukuku</a></li>
-                                    <li><a href="services.html">Miras Hukuku</a></li>
-                                    <li><a href="services.html">Tazminat Hukuku</a></li>
-                                    <li><a href="services.html">Ticaret Hukuku</a></li>
-                                    <li><a href="services.html">Tıp Hukuku</a></li>
+                                    <li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                                    <li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                                    <li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="{% url 'icrahukuku' %}">İcra-İflas Hukuku</a></li>
+                                    <li><a href="{% url 'ishukuku' %}">İş Hukuku</a></li>
+                                    <li><a href="{% url 'mirashukuku' %}">Miras Hukuku</a></li>
+                                    <li><a href="{% url 'tazminathukuku' %}">Tazminat Hukuku</a></li>
+                                    <li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                                    <li><a href="{% url 'tiphukuku' %}">Tıp Hukuku</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Yayınlar</a>
+                            <li>
+                                <a href="{% url 'yayinlar' %}">Yayınlar</a>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">İletişim</a>
+                            <li>
+                                <a href="{% url 'iletisim' %}">İletişim</a>
 
                             </li>
 
@@ -145,7 +139,7 @@
                                 <div class="col col-lg-3 col-md-3 col-sm-6">
                                     <div class="widget about-widget">
                                         <div class="logo widget-title">
-                                            <img src="{% static 'mainapp/images/zeybek-hukuk-logo-beyaz.png' %}" alt>
+                                            <img src="{% static 'mainapp/images/zeybek-hukuk-logo-beyaz.png' %}" alt="Zeybek Hukuk Beyaz Logo">
                                         </div>
                                         <p>Zeybek Hukuk | Danışmanlık Bürosu yıllara sari hukuki deneyimi ile müvekkillerine hukuki hizmet için İzmit'te hazır.</p>
                                     </div>
@@ -158,7 +152,7 @@
                                         </div>
                                         <ul>
                                           {% for makale in ucmakale %}
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">{{ makale.makale_baslik }}</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></li>
                                           {% endfor %}
                                         </ul>
                                     </div>
@@ -170,15 +164,15 @@
                                             <h3>Hukuki Uzmanlıklar</h3>
                                         </div>
                                         <ul>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Ceza Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Aile Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Gayrimenkul Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">İcra-İflas Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">İş Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Miras Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Tazminat Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Ticaret Hukuku</a></li>
-                                            <li class="footer-link-lis"><a class="footer-link-as" href="#">Tıp Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'icrahukuku' %}">İcra-İflas Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'ishukuku' %}">İş Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'mirashukuku' %}">Miras Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'tazminathukuku' %}">Tazminat Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                                            <li class="footer-link-lis"><a class="footer-link-as" href="{% url 'tiphukuku' %}">Tıp Hukuku</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -190,8 +184,8 @@
                                         </div>
                                         <ul>
                                             <li><span>Adres : </span> Şehit Musa Sokak 35, 41040 Kocaeli, İzmit Türkiye</li>
-                                            <li><span>Telefon : </span> (123) 456-78-95 OR  (123) 789456</li>
-                                            <li><span>Email : </span> info@gmail.com</li>
+                                            <li><span>Telefon : </span> info@zeybekhukuk.com</li>
+                                            <li><span>Email : </span> info@zeybekhukuk.com</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -205,15 +199,8 @@
                             <div class="row">
                                 <div class="separator"></div>
                                 <div class="col col-xs-12">
-                                    <p class="copyright-one">© 2019. Zeybek Hukuk Bürosu </p>
+                                  <p class="copyright-one">2019 Zeybek Hukuk Bürosu - 2019 </p>
 
-                                        <div class="social-icons">
-                                            <ul>
-                                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
                                 </div>
                             </div>
                         </div>

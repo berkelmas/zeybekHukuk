@@ -1,0 +1,84 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | İcra-İflas Hukuku </title>
+<meta name="description" content="Kocaeli Avukatı Zeybek Hukuk Bürosunun icra ve iflas hukuku alanında; Avukat Kerem Zeybek olarak görüşlerini bildirdiği sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>İcra ve İflas Hukuku</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>İcra ve İflas Hukuku</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section choose-mt-2">
+    <div class="container">
+        <div class="row choose-mb">
+
+          <div class="col col-lg-8 col-lg-offset-1 col-sm-12>
+              <div class="service-single-content">
+                  <div class="service-pic">
+                      <img src="{% static 'mainapp/images/zeybek-hukuk-icra-hukuku.png' %}" alt="Zeybek Hukuk İcra Hukuku"></img>
+                  </div>
+                  <h2>İcra Hukuku</h2>
+                  <p>İflas ve Konkordato kavramları tamamen farklı anlamlara gelmesi nedeniyle uygulama ve sonuçlandırma aşamaları incelendiğinde farklı hukuki süreçler işlemektedir. İflas, Türkiye Cumhuriyeti yasalarına göre tair ya da tacir statüsünde yer alan borçlu ödemekle yükümlü olduğu borcunu ödemeyecek duruma gelmesi halidir. Konkordato ise herhangi bir durum sonucunda işlerinde bozulmalar yaşanan ve ödeme güçlüğüne düşen iyi niyetli borçlunun korunması amacıyla oluşturulmuş bir kavramdır. Zeybek Hukuk Bürosu olarak kurumsal anlamda şirketlere İflas ve Konkordato alanlarında profesyonel danışmanlık ve avukatlık hizmeti sunmaktayız.</p>
+                  <h3 class="color-b">İcra ve İflas Hukuku Nedir? </h3>
+                  <p>İflas ve Konkordato Hukuku temelde iki farklı kavram olmaları ve farklı anlamlar taşımaları nedeniyle ayrı ayrı açıklamaya çalışacağız</p>
+                  <h4>İflas Nedir?</h4>
+                    <p>Tacir kişinin borçlarının alacakları ile karşılaştırıldığında daha fazla olması sonucunda borçlu sıfatına sahip olan tacir kişinin iflasını istemesi gerekmektedir. Borçları alacakları ile karşılaştırıldığında daha fazla olan bir şirketin iflas istememesi İcra ve İflas Kanunu kapsamında bir suç teşkil etmektedir. Söz konusu kanunlar uyarınca borcu alacaklarını aşan şirketlerin iflas etmemesi halinde öngörülmüş cezai işlem ise hapistir.</p>
+                    <p>Bunun yanı sıra ilgili tacir bu sürecin aşılabileceğine inanıyor ise “iflas erteleme” başvurusu gerçekleştirmesi gerekmektedir. Bu süreçte Zeybek Hukuk Bürosu olarak sizlerin yanında olarak gerekli adli ve hukuki sürecin nasıl işlediğine dair tüm detayları paylaşarak çalışmaları gerçekleştiriyoruz.</p>
+                  <h4>Konkordato Nedir ?</h4>
+                    <p>Konkordato, neden kaynaklandığının bir önemi olmaksızın, işlerinde bozulma yaşanan ve ödeme güçlüğü yaşayan fakat iyiniyetli olan borçluya yönelik hazırlanan bir kavramdır. İlgili kavram neticesinde başvuru gerçekleştirecek borçlu, alacaklı sayısı ve alacaklı miktarının toplamda 2/3’ü ile bir anlaşma varması ve ilgili anlaşma sonucunu Asliye Ticaret Mahkemesi’nde tasdik ettirmelidir.</p>
+                    <p>Konkordatonun Asliye Ticaret Mahkemesi’nde tasdiklenebilmesi için aşağıda yer alan şartları sağlamış olmanız gerekmektedir.</p>
+                  <ul>
+                    <li class="uzmanlik-list">Borçlu dürüst olmalıdır.</li>
+                    <li class="uzmanlik-list">Teklif edilen ödeme, borçlunun malvarlığı ile orantılı olmalıdır.</li>
+                    <li class="uzmanlik-list">Borçlu, konkordatonun tasdik edilmesi halinde alacaklılara ödeyeceği miktar için yeterli miktarda teminat sunmalıdır.</li>
+                    <li class="uzmanlik-list">Konkordato üçte iki çoğunlukla kabul edilmiş olmalıdır.</li>
+                    <li class="uzmanlik-list">Yargılama harç ve masraflarını depo etmelidir.</li>
+                    <li class="uzmanlik-list">Asgari yüzde elli ödeme taahhüdünde bulunmalıdır.</li>
+                  </ul>
+                  <h3>Zeybek Hukuk Bürosu Tarafından İflas ve Konkordato Hukuku Alanında Sağlanan Bazı Hizmetler</h3>
+                    <p>Avukat Kerem Zeybek başta olmak üzere tüm büro çalışanlarımızın ilgili hukuki alanda en sık karşılaştıkları konular aşağıda listelenmiştir.</p>
+                  <ul>
+                    <li class="uzmanlik-list">İflas yolu ile takip</li>
+                    <li class="uzmanlik-list">İflas davasının takibi</li>
+                    <li class="uzmanlik-list">İflasın Ertelenmesi</li>
+                    <li class="uzmanlik-list">Konkordato ilanı ve konkordato hakkında her türlü danışmanlık hizmeti</li>
+                    <li class="uzmanlik-list">Şirketlerde borca batıklık durumunun denetlenmesi</li>
+                    <li class="uzmanlik-list">Şirket kurtarma çalışmaları</li>
+                    <li class="uzmanlik-list">İlgili hukuk dalı kapsamında ele alınan her türlü konu</li>
+                  </ul>
+                  <p>Yukarıda paylaşmış olduğumuz başlıklar genel anlamda fikir sahibi olabilmeniz ve örnek olması amacıyla paylaşılmış olup, Zeybek Hukuk Bürosu bünyesinde İcra, İflas ve Konkordato Hukuku kapsamına giren tüm konularda profesyonel olarak danışmanlık ve avukatlık hizmeti sağlanmaktadır.</p>
+              </div>
+
+            {% include 'mainapp/components/practices.html' %}
+
+
+            </div>
+        </div>
+        <hr class="divider_40">
+
+</section>
+<!-- end service-single-section -->
+
+
+
+
+{% endblock %}

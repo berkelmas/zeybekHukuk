@@ -1,0 +1,76 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | İş Hukuku </title>
+<meta name="description" content="Kocaelinde Avukatlık Hizmeti veren Zeybek Hukuk Bürosunun İş Hukuku Hakkındaki Tanıtıcı Yazı ve Avukat Kerem Zeybek'in İş Hukukundaki Tecrübelerini Paylaştığı Sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>İş Hukuku</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>İş Hukuku</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section choose-mt-2">
+    <div class="container">
+        <div class="row choose-mb">
+
+          <div class="col col-lg-8 col-lg-offset-1 col-sm-12>
+              <div class="service-single-content">
+                  <div class="service-pic">
+                      <img src="{% static 'mainapp/images/zeybek-hukuk-is-hukuku.png' %}" alt="Zeybek Hukuk İş Hukuku"></img>
+                  </div>
+                  <h2>İş Hukuku</h2>
+                    <p>Günümüzde yaşantımızı sürdürebilmek ve ihtiyaçlarımızı karşılayabilmek adına hemen hemen hepimiz bir meslek ve iş sahibi konumundayız. Hal böyle olunca işçi ve işveren arasında yaşanan tüm ilişkiler yasalar çerçevesinde tüm ince detaylarına dikkat edilerek karşılıklı olarak her iki tarafında hak ve görevleri, işe ve işyerine dair yasa ve yönetmelikler oluşturulmuş ve bunlar İş Hukuku adı altında toplanmıştır.</p>
+                    <p>Zeybek Hukuk Bürosu, işçi ve işveren arasında yaşanan tüm anlaşmazlıkların çözüme kavuşturulabilmesi adına İş ve Sosyal Güvenlik Hukuku alanında özel eğitimler alarak uzmanlaşan bilgili ve tecrübeli avukat kadrosuyla sizlere hizmetlerini sunmaktadır.</p>
+                  <h3 class="color-b">İş Hukuku Nedir ? </h3>
+                    <p>İş Hukuku; iş, işçi ve işverenin tüm detaylarıyla ele alındığı önemli bir hukuk dalıdır. İşveren ile işçi arasında yaşanan tüm anlaşmazlık ve uyuşmazlık problemlerinin hukuk kapsamında çözüme ulaştırılması için öncelikli olarak başvurulacak hukuk dalıdır. Çok fazla detay yer alması sebebiyle şahıs ve kurumların uzman desteği almadan hukuki süreçlerini ilerletmeleri pek mümkün olmamaktadır. Bu süreçte başta Avukat Kerem Zeybek olmak üzere büro avukatlarımız sizlere hizmetlerini sunmaktadır.</p>
+                    <p>İş Hukuku yalnızca işçi ve işveren arasında yaşanan anlaşmazlıkları değil aynı zamanda SGK, iş ve işçi bulma kurumları gibi işveren, iş ve işçileri ilgilendiren birçok dernek ve kurumla olan ilişkinin düzenlenebilmesi açısından da oldukça önemli bir yere sahiptir.</p>
+                  <h3>İş Hukuku Neleri Kapsar, Konuları Nelerdir ?</h3>
+                    <p>İş Hukuku incelendiğinde kendi içerisinde iki alt başlık halinde yer aldığı gözlemlenebilir. Bu alt başlıklar şu şekildedir</p>
+                    <p><strong>Bireysel İş Hukuku:</strong> Çoğu zaman işçi sayısı bakımından dikkate alındığında küçük çaplı olarak görülen işletmelerde iş görme, işçi ve işveren arasında gerçekleşen ilişkilerin düzenlenmesi ve düzenin sağlanmasıyla ilgili alt hukuk dalıdır. İlgili işletmelerde taraflar arasında çıkan her türlü anlaşmazlık sonucunda bu anlaşmazlıkları çözüme ulaştıran, gerçekleşen sözleşme ihlalleri, işçinin sergilediği davranış sonucunda yaşanan bozukluk ve iş sözleşmesine bağlı kalınmama durumlarının detaylı bir şekilde düzenlendiği kanunlar bütünüdür.</p>
+                    <p><strong>Toplu İş Hukuku:</strong> Çoğu zaman işçi sayısı bakımından dikkate alındığında büyük çaplı olarak görülen işletmeler ve sendikalar için geçerlidir. İlgili kurumlarda gerçekleşmekte olan toplu iş sözleşmeleri sırasında hak ve menfaat uyuşmazlıklarını ve bunlardan doğan uyuşmazlıkların çözülmesi için grev, lokavt, arabuluculuk ve hakem kuralları gibi birçok detayın yer aldığı hukuki kurallar bütünüdür.</p>
+                  <h3>Zeybek Hukuk Bürosu Tarafından İş Hukuku Alanında Sağlanan Bazı Hizmetler</h3>
+                    <p>Zeybek Hukuk Bürosu olarak başta Avukat Kerem Zeybek olmak üzere tüm avukat arkadaşlarımızla birlikte yaşamış olduğunuz anlaşmazlık, uyuşmazlık ve hukuki anlamda sorunların çözümü için danışmanlık ve avukatlık hizmeti sağlamaktayız. Bu kapsamda avukatlarımızın en sık karşılaşmış olduğu dava başlıkları ise şunlardır;</p>
+                  <ul>
+                    <li class="uzmanlik-list">İhbar, kıdem ve işe iade davası açılması ve takibin gerçekleştirilmesi,</li>
+                    <li class="uzmanlik-list">Fazla mesai ücretlerinin hesaplanması,</li>
+                    <li class="uzmanlik-list">Yıllık ücretli iznin kullandırılması ve hesaplanması,</li>
+                    <li class="uzmanlik-list">İşçi ve işyeri güvenliği konusunda dikkat edilmesi gereken konularda hukuki danışmanlık,</li>
+                    <li class="uzmanlik-list">Güncel mevzuata uygun bir şekilde sözleşmelerin hazırlanması,</li>
+                    <li class="uzmanlik-list">Çalışan/Çalışanların yararlanma, ölüm ve iş görmezlik halleri ile ilgili davaların takibi,</li>
+                    <li class="uzmanlik-list">Performans düşüklüğü, ekonomik sebepler ve benzeri haklı sebepler nedeniyle iş sözleşmesinin feshi halleri </li>
+                  </ul>
+                  <p>Yukarıda yer alan dava başlıkları yalnızca örnek vermek amaçlı olup, İş ve Sosyal Güvenlik Hukuku kapsamına giren tüm hukuki süreçlerde avukatlık büromuz sizlere hizmet sağlamaktadır.</p>
+              </div>
+
+            {% include 'mainapp/components/practices.html' %}
+
+
+            </div>
+        </div>
+        <hr class="divider_40">
+
+</section>
+<!-- end service-single-section -->
+
+
+
+
+{% endblock %}

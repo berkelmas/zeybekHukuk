@@ -1,0 +1,80 @@
+{% extends 'mainapp/components/layout.html' %}
+{% load static %}
+
+{% block metaTitle %}
+
+<title> Zeybek Hukuk | Ceza Hukuku </title>
+<meta name="description" content="Kocaeli Avukatı Olan Zeybek Hukuk Bürosunun Ceza Hukuku Alanındaki Tecrübe ve Görüşlerinin Yer Aldığı, yaralama, öldürme gibi ceza gerektiren suçlarda uzmanlığını anlattığı sayfadır.">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>Ceza Hukuku</h2>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+                    <li>Ceza Hukuku</li>
+                </ol>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section choose-mt-2">
+    <div class="container">
+        <div class="row choose-mb">
+
+          <div class="col col-lg-8 col-lg-offset-1 col-sm-12>
+              <div class="service-single-content">
+                  <div class="service-pic">
+                      <img src="{% static 'mainapp/images/zeybek-hukuk-ceza-hukuku.png' %}" alt="Zeybek Hukuk Ceza Hukuku"></img>
+                  </div>
+                  <h2>Ceza Hukuku</h2>
+                  <p>Şahısların sosyal yaşantıları içerisinde adaletli bir yaşam sürdürebilmesi amacıyla hayatımızın bir parçası haline gelmiş hukuk dallarından birisi Ceza Hukuku’dur. Hayatımızın hemen hemen her alanında bir hukuki durum karşımıza çıkmaktadır ve bu durumlar birçok alt başlık halinde detaylıca ele alınmıştır. Şahısların yaşamlarının belirli anlarında yaşamış oldukları olumsuzluk, haksızlık veya gerçekleştirmiş oldukları hatalı davranışlar neticesinde Hukuk sistemi çerçevesinde belirli uygulama ve cezai işlemler belirlenmiştir. Zeybek Hukuk Bürosu olarak Ceza Hukuku kapsamında ele alınan tüm konularda profesyonel hizmetler sağlamaktayız.</p>
+                  <h3 class="color-b">Ceza Hukuku Nedir? </h3>
+                  <p>Ceza Hukuku, mevcut suçlar ve ceza kavramlarının tüm detaylarıyla işlenmiş olduğu Kamu Hukuku bünyesinde yer alan bir hukuk dalıdır. Kendi içerisinde iki alt başlıkla incelenmektedir.</p>
+                  <p>Genel Ceza Hukuku; suç kavramlarının farklı bir bakış açısıyla ele alındığı alt hukuk dalıdır. Süreci maddi ve manevi açıdan ele alır.</p>
+                  <p>Özel Ceza Hukuku; herhangi bir ülkenin belirlemiş olduğu kanunlar çerçevesinde gerçekleştirilmiş eylem ya da eylemlerin suç teşkil edip, etmediğiyle ilgilenir. İlgili eylemlerin sınırlandırmalarını ve bu sınırlandırmalara uyulmadığı takdirde karşı karşıya kalınacak cezaların neler olduğunu ele alır.</p>
+                  <h3 class="color-b">Ceza Hukuku Neleri Kapsar, Konuları Nelerdir ?</h3>
+                  <p>Ceza Hukuku, toplum düzeninin sağlanabilmesi adına birçok konuyu tüm detaylarıyla incelemektedir;</p>
+                  <ul>
+                    <li class="uzmanlik-list">Kişi hak ve özgürlüğünün korunması,</li>
+                    <li class="uzmanlik-list">Kamu düzen ve güvenliğinin sağlanması,</li>
+                    <li class="uzmanlik-list">Hukuk devleti, kamu sağlığı ve çevrenin korunması,</li>
+                    <li class="uzmanlik-list">Toplum içerisinde barışın hakim olmasını sağlamak,</li>
+                    <li class="uzmanlik-list">Suç eylemlerinin işlenmesini önlemek.</li>
+                  </ul>
+                  <h3>Zeybek Hukuk Bürosu Tarafından Ceza Hukuku Alanında Sağlanan Bazı Hizmetler</h3>
+                  <p>Zeybek Hukuk Bürosu tüzel veya tüzel olmayan kişilerin Ceza Hukuku kapsamında ele alınan konularında yaşamış oldukları anlaşmazlık veya sorunların adli sürece taşınması ve ilgili hukuki sürecin işleyişi hakkında danışmanlık ve avukatlık hizmeti sağlamaktadır. Büro çalışanlarımızdan Avukat Kerem Zeybek ve diğer avukat arkadaşlarımızın sıkça karşılaştığı konu başlıkları ise şunlardır;</p>
+                  <ul>
+                    <li class="uzmanlik-list">Ceza soruşturmasının başlatılabilmesi için gerekli şikâyet ve suç duyurusu işlemlerinin gerçekleştirilmesi,</li>
+                    <li class="uzmanlik-list">Gözaltı süreci içerisinde hukuki destek ve ifadeye katılma,</li>
+                    <li class="uzmanlik-list">Şikayetçi ve müdahil vekili olarak ceza davalarının takibini gerçekleştirme,</li>
+                    <li class="uzmanlik-list">Şüpheli ve sanık avukatı olarak ceza davaları sırasında gerekli savunma ve hukuki desteğin sağlanması,</li>
+                    <li class="uzmanlik-list">Ceza soruşturması sırasında kolluk ve savcılık süreçleri içerisinde şikayetçi ya da şüpheli tarafın temsili,</li>
+                    <li class="uzmanlik-list">Anayasa Mahkemesi ya da Avrupa İnsan Hakları Mahkemesi’ne gerçekleştirilecek başvurular.</li>
+                  </ul>
+                  <p>Yukarıda sizlerle paylaşılmış olan dava tipleri örnek vermek amaçlı olup, Zeybek Hukuk Bürosu bünyesinde ceza hukuku kapsamına giren tüm davalarda avukatlık hizmeti verilmektedir.</p>
+              </div>
+
+            {% include 'mainapp/components/practices.html' %}
+
+
+            </div>
+        </div>
+        <hr class="divider_40">
+
+</section>
+<!-- end service-single-section -->
+
+
+
+
+{% endblock %}
