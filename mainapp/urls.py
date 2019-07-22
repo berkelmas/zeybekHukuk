@@ -3,6 +3,7 @@ from .views import index, about, ailehukuku, cezahukuku, gayrimenkulhukuku, icra
                 ishukuku, mirashukuku, tazminathukuku, ticarethukuku, tiphukuku, iletisim, \
                 yayinlar, makaledetay
 
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', index, name="index"),
@@ -17,6 +18,8 @@ urlpatterns = [
     path('ticaret-hukuku', ticarethukuku, name="ticarethukuku"),
     path('tip-hukuku', tiphukuku, name="tiphukuku"),
     path('iletisim', iletisim, name="iletisim"),
+    path('sitemap.xml/', TemplateView.as_view(template_name='mainapp/sitemap.xml', content_type='text/plain'), name="sitemap" ),
+    path('robots.txt/', TemplateView.as_view(template_name='mainapp/robots.txt', content_type='text/plain')),
 
     path('yayinlar', yayinlar, name="yayinlar"),
     path('yayin/<slug:makaleslug>', makaledetay, name="makaledetay")
