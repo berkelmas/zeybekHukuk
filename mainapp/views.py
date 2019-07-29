@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Makaleler
+from .models import Makaleler, Contact
 
 from django.core.paginator import Paginator
 
@@ -54,7 +54,8 @@ def iletisim(request):
         adsoyad = request.POST.get('isim')
         telefon = request.POST.get('telefon')
         mesaj = request.POST.get('mesaj')
-        print(adsoyad)
+        newContact = Contact(iletisim_adsoyad = adsoyad, iletisim_telefon = telefon, iletisim_mesaj = mesaj)
+        newContact.save()
 
         return redirect('index')
 
